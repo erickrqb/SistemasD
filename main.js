@@ -4,7 +4,7 @@ $(document).ready(function() {
         
     tablaUsuarios = $('#tablaUsuarios').DataTable({  
         "ajax":{            
-            "url": "http://erqb-itp-sd-01.rf.gd/Api-Rest-H/crud.php", 
+            "url": "erqb-itp-sd-01.rf.gd/Api-Rest-H/crud.php", 
             "method": 'POST', 
             "data":{opcion:opcion}, 
             "dataSrc":"",
@@ -29,7 +29,7 @@ $(document).ready(function() {
         res_fecha = $.trim($('#res_fecha').val());    
         lib_cve = $.trim($('#lib_cve').val());                               
             $.ajax({
-              url: "http://erqb-itp-sd-01.rf.gd/Api-Rest-H/crud.php",
+              url: "erqb-itp-sd-01.rf.gd/Api-Rest-H/crud.php",
               type: "POST",
               datatype:"json",    
               data:  {res_cve:res_cve, res_persona:res_persona, res_dias:res_dias, res_fecha:res_fecha, lib_cve:lib_cve ,opcion:opcion},    
@@ -80,7 +80,7 @@ $(document).ready(function() {
         var respuesta = confirm("Se borrara el registro "+res_cve+"?");                
         if (respuesta) {            
             $.ajax({
-              url: "http://erqb-itp-sd-01.rf.gd/Api-Rest-H/crud.php",
+              url: "erqb-itp-sd-01.rf.gd/Api-Rest-H/crud.php",
               type: "POST",
               datatype:"json",    
               data:  {opcion:opcion, res_cve:res_cve},    
